@@ -1,7 +1,7 @@
-from rest_framework                               import serializers
-from authAppExample.models.user                   import User
-from authAppExample.models.account                import Account
-from authAppExample.serializers.accountSerializer import AccountSerializer
+from rest_framework                                import serializers
+from authAppExample.models.user                    import User
+from authAppExample.models.inmueble                import Account
+from authAppExample.serializers.inmuebleSerializer import AccountSerializer
 
 class UserSerializer(serializers.ModelSerializer):
     account = AccountSerializer()
@@ -32,6 +32,7 @@ class UserSerializer(serializers.ModelSerializer):
                 "estado"         : account.estado,
                 "descripcion"    : account.descripcion,
                 "ubicacion"      : account.ubicacion,
-                "lastChangeDate" : account.lastChangeDate
+                "lastChangeDate" : account.lastChangeDate,
+                "isAvailable"    : account.isAvailable
             }
         }

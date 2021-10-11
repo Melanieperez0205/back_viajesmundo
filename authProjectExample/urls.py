@@ -9,9 +9,9 @@ urlpatterns = [
     path('refresh/',                                TokenRefreshView.as_view()), # generate new access token
     path('user/',                                   authAppViews.UserCreateView.as_view()), # create a new user
     path('user/<int:pk>/',                          authAppViews.UserDetailView.as_view()), # check info for an specific user based on id(pk)
-    path('transaction/',                            authAppViews.TransactionCreateView.as_view()), # create a new transaction
-    path('transaction/<int:user>/<int:pk>/',        authAppViews.TransactionsDetailView.as_view()), # view information for a transaction
-    path('transactions/<int:user>/<int:account>/',  authAppViews.TransactionsAccountView.as_view()), # view all transactions for an specific account
-    path('transaction/update/<int:user>/<int:pk>/', authAppViews.TransactionsUpdateView.as_view()), # update a transaction
-    path('transaction/remove/<int:user>/<int:pk>/', authAppViews.TransactionsDeleteView.as_view()), # delete a transaction
+    #path('transaction/',                            authAppViews.TransactionCreateView.as_view()), # create a new transaction
+    #path('transaction/<int:user>/<int:pk>/',        authAppViews.TransactionsDetailView.as_view()), # view information for a transaction
+    #path('transactions/<int:user>/<int:account>/',  authAppViews.TransactionsAccountView.as_view()), # view all transactions for an specific account
+    #path('transaction/update/<int:user>/<int:pk>/', authAppViews.TransactionsUpdateView.as_view()), # update a transaction
+    #path('transaction/remove/<int:user>/<int:pk>/', authAppViews.TransactionsDeleteView.as_view()), # delete a transaction
 ]
