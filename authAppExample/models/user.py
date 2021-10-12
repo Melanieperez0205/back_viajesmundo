@@ -1,7 +1,7 @@
 from django.db                   import models
 from django.contrib.auth.models  import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.contrib.auth.hashers import make_password
-from .inmueble                   import Account
+
 
 
 class UserManager(BaseUserManager):
@@ -31,7 +31,6 @@ class UserManager(BaseUserManager):
 
 class User(AbstractBaseUser, PermissionsMixin):
     id           = models.BigAutoField(primary_key=True)
-    id_inmueble  = models.ForeignKey(Account, related_name='inmuebles', on_delete=models.CASCADE, default= 0)
     username     = models.CharField('Username', max_length = 15, unique=True)
     password     = models.CharField('Password', max_length = 256)
     email        = models.EmailField('Email',   max_length = 100)

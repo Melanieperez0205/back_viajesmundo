@@ -1,5 +1,7 @@
 from authAppExample.models.inmueble import Account
-from rest_framework                import serializers
+from rest_framework                 import serializers
+from authAppExample.models.user     import User
+
 
 class AccountSerializer(serializers.ModelSerializer):
     class Meta:
@@ -7,6 +9,7 @@ class AccountSerializer(serializers.ModelSerializer):
         fields = ['habitaciones', 'banios', 'alimentacion','valoracion','precio','descripcion','ubicacion','lastChangeDate','isAvailable']
 
     def to_representation(self, obj):
+        user    = User.objects.get(id=obj.user)
         inmueble = Account.objects.get(id=obj.id)
         return{
             "id"             : inmueble.id,
@@ -18,5 +21,10 @@ class AccountSerializer(serializers.ModelSerializer):
             "descripcion"    : inmueble.descripcion,
             "ubicacion"      : inmueble.ubicacion,
             "lastChangeDate" : inmueble.lastChangeDate,
-            "isAvailable"    : inmueble.isAvailable
+            "isAvailable"    : inmueble.isAvailable,
+            'user' : {
+                'id'        : user.id,
+                'username'  : user.name,
+                'email'     : user.email
+            }
         }
