@@ -1,1 +1,1 @@
-web: gunicorn authModuleExample.wsgi
+web: gunicorn authProjectExample.wsgi

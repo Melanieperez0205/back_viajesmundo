@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-#law0p2#9^r%v$h66yk%t-g&32%b23nj17(yeliop(j=y6$bax
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['ec2-3-221-100-217.compute-1.amazonaws.com','localhost']
 
 
 # Application definition
@@ -75,7 +75,7 @@ REST_FRAMEWORK = {
 
 AUTH_USER_MODEL = 'authAppExample.User'
 
-ROOT_URLCONF = 'authModuleExample.urls'
+ROOT_URLCONF = 'authProjectExample.urls'
 
 TEMPLATES = [
     {
@@ -102,10 +102,10 @@ WSGI_APPLICATION = 'authModuleExample.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE'   : 'django.db.backends.postgresql_psycopg2',
-        'NAME'     : 'dah3e98f302np8',
-        'USER'     : 'bkeetnlmfdctpx',
-        'PASSWORD' : 'a77e26495c7def8a47b66d78daa89cbcee69a85eab366442029fe5ada4db73a0',
-        'HOST'     : 'ec2-54-196-33-23.compute-1.amazonaws.com',
+        'NAME'     : 'd4op7qctc5iq6o',
+        'USER'     : 'vajlmxqmrcsixg',
+        'PASSWORD' : '8fdd2a33543efa62c6f94a996b2b704b20fd2668d5f809ea612cff448c83b326',
+        'HOST'     : 'ec2-3-221-100-217.compute-1.amazonaws.com',
         'PORT'     : '5432'
     }
 }
