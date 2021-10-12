@@ -11,4 +11,4 @@ class Account(models.Model):
     descripcion    = models.CharField('Descripcion inmueble', max_length=50,default='')
     ubicacion      = models.CharField('Ubicacion inmueble', max_length=50,default='')
     lastChangeDate = models.DateTimeField()
-    isAvalaible = models.BooleanField(default=True)
+    isAvalaible    = models.BooleanField(default=True)

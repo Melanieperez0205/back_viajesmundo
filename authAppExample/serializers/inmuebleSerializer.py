@@ -10,7 +10,6 @@ class AccountSerializer(serializers.ModelSerializer):
         inmueble = Account.objects.get(id=obj.id)
         return{
             "id"             : inmueble.id,
-            "id_inmuebles"   : inmueble.id_inmuebles,
             "habitaciones"   : inmueble.balance,
             "banios"         : inmueble.banios,
             "alimentacion"   : inmueble.alimentacion,
