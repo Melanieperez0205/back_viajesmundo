@@ -23,7 +23,6 @@ class UserSerializer(serializers.ModelSerializer):
             'username': user.username,
             'email'   : user.email,
             'account' : {
-                "id"             : account.id,
                 "habitaciones"   : account.habitaciones,
                 "banios"         : account.banios,
                 "alimentacion"   : account.alimentacion,
