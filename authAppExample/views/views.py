@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from authAppExample.models import Account
-from authAppExample.forms import InmuebleForm
+from authAppExample.forms import InmuebleForm, UserRegisterForm
+from django.contrib import messages
 
 def inicio(request):
     inmuebles = Account.objects.all()
@@ -56,3 +57,16 @@ def perfil(request):
     return render(request,'perfil.html',contexto)
 
 
+def register(request):
+    if request.method == 'POST':
+	    form = UserRegisterForm(request.POST)
+	    if form.is_valid():
+		    form.save()
+		    username = form.cleaned_data['username']
+		    messages.success(request, f'Usuario {username} creado')
+		    return redirect('index')
+    else:
+		    form = UserRegisterForm()
+
+    context = { 'form' : form }
+    return render(request, 'registration/registro.html', context)

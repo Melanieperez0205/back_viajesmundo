@@ -110,9 +110,9 @@ WSGI_APPLICATION = 'authProjectExample.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE'   : 'django.db.backends.postgresql_psycopg2',
-        'NAME'     : 'estasies',
+        'NAME'     : 'ultima',
         'USER'     : 'postgres',
-        'PASSWORD' : '11032001',
+        'PASSWORD' : 'aK47vEGAS6@',
         'HOST'     : 'localhost',
         'PORT'     : '5432',
     }   
