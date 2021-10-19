@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-#law0p2#9^r%v$h66yk%t-g&32%b23nj17(yeliop(j=y6$bax
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['ec2-3-221-100-217.compute-1.amazonaws.com','localhost']
+ALLOWED_HOSTS = ['ec2-3-213-41-172.compute-1.amazonaws.com','localhost']
 
 
 # Application definition
@@ -102,10 +102,10 @@ WSGI_APPLICATION = 'authProjectExample.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE'   : 'django.db.backends.postgresql_psycopg2',
-        'NAME'     : 'd4op7qctc5iq6o',
-        'USER'     : 'vajlmxqmrcsixg',
-        'PASSWORD' : '8fdd2a33543efa62c6f94a996b2b704b20fd2668d5f809ea612cff448c83b326',
-        'HOST'     : 'ec2-3-221-100-217.compute-1.amazonaws.com',
+        'NAME'     : 'd7ane6790nrivl',
+        'USER'     : 'ulxbdbbxyfqfbg',
+        'PASSWORD' : '9e35b65e8802b2a9777b680d13a37a1495887572faac7c5152d8b6578532c95a',
+        'HOST'     : 'ec2-3-213-41-172.compute-1.amazonaws.com',
         'PORT'     : '5432'
     }
 }
