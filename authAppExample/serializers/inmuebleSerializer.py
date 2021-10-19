@@ -12,7 +12,6 @@ class AccountSerializer(serializers.ModelSerializer):
         user    = User.objects.get(id=obj.user)
         inmueble = Account.objects.get(id=obj.id)
         return{
-            "id"             : inmueble.id,
             "habitaciones"   : inmueble.balance,
             "banios"         : inmueble.banios,
             "alimentacion"   : inmueble.alimentacion,
@@ -22,8 +21,5 @@ class AccountSerializer(serializers.ModelSerializer):
             "ubicacion"      : inmueble.ubicacion,
             "lastChangeDate" : inmueble.lastChangeDate,
             "isAvailable"    : inmueble.isAvailable,
-            'user' : {
-                'username'  : user.name,
-                'email'     : user.email
-            }
+        
         }
