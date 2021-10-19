@@ -93,7 +93,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'authModuleExample.wsgi.application'
+WSGI_APPLICATION = 'authProjectExample.wsgi.application'
 
 
 # Database

@@ -28,6 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 # Application definition
 
@@ -40,7 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework', 
     'authAppExample',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME'   : timedelta(minutes=10),
@@ -82,7 +88,7 @@ ROOT_URLCONF = 'authProjectExample.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -104,9 +110,9 @@ WSGI_APPLICATION = 'authProjectExample.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE'   : 'django.db.backends.postgresql_psycopg2',
-        'NAME'     : 'p8_bank',
+        'NAME'     : 'estasies',
         'USER'     : 'postgres',
-        'PASSWORD' : 'aK47vEGAS6@',
+        'PASSWORD' : '11032001',
         'HOST'     : 'localhost',
         'PORT'     : '5432',
     }   
