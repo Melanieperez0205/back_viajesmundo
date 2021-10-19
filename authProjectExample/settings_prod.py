@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'authAppExample',
+    'crispy_forms',
 ]
 
 SIMPLE_JWT = {
