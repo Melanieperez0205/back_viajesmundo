@@ -1,4 +1,8 @@
 from django.db import models
+<<<<<<< HEAD
+=======
+from .user     import User
+>>>>>>> origin/main
 from django.utils import timezone
 
 class Account(models.Model):

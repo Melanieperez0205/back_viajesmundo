@@ -29,7 +29,11 @@ class UserManager(BaseUserManager):
         return user
 
 
+<<<<<<< HEAD
 class User(models.Model):
+=======
+class User(AbstractBaseUser, PermissionsMixin):
+>>>>>>> origin/main
     id           = models.BigAutoField(primary_key=True)
     username     = models.CharField('Username', max_length = 15, unique=True)
     password     = models.CharField('Password', max_length = 256)
@@ -41,6 +45,10 @@ class User(models.Model):
         super().save(**kwargs)
     
     objects = UserManager()
+<<<<<<< HEAD
     USERNAME_FIELD = 'username'
 
 
+=======
+    USERNAME_FIELD = 'username'
+>>>>>>> origin/main

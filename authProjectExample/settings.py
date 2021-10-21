@@ -28,7 +28,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+<<<<<<< HEAD
 LOGIN_REDIRECT_URL = 'perfil'
+=======
+LOGIN_REDIRECT_URL = '/'
+>>>>>>> origin/main
 LOGOUT_REDIRECT_URL = '/'
 
 
@@ -80,6 +84,10 @@ REST_FRAMEWORK = {
 	)
 }
 
+<<<<<<< HEAD
+=======
+AUTH_USER_MODEL = 'authAppExample.User'
+>>>>>>> origin/main
 
 
 ROOT_URLCONF = 'authProjectExample.urls'
@@ -109,7 +117,11 @@ WSGI_APPLICATION = 'authProjectExample.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE'   : 'django.db.backends.postgresql_psycopg2',
+<<<<<<< HEAD
         'NAME'     : 'pruebaregistro',
+=======
+        'NAME'     : 'ultima',
+>>>>>>> origin/main
         'USER'     : 'postgres',
         'PASSWORD' : 'aK47vEGAS6@',
         'HOST'     : 'localhost',
